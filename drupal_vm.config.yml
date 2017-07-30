@@ -7,7 +7,7 @@
 #   - geerlingguy/ubuntu1604
 #   - geerlingguy/ubuntu1404
 #   - geerlingguy/ubuntu1204
-vagrant_box: {!vbox!}
+vagrant_box: geerlingguy/ubuntu1604
 
 vagrant_user: vagrant
 vagrant_synced_folder_default_type: nfs
