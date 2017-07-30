@@ -5,6 +5,9 @@
   "authors": [
     { "name": "Valentine Matsveiko", "email": "mve@drupalway.net" }
   ],
+  "bin": [
+    "vmgen-php"
+  ],
   "require": {
     "php": ">=5.6"
   }
