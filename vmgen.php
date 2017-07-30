@@ -21,5 +21,7 @@ if (!empty($argv)) {
   rmove($projects_dir . '/' . $arguments['project_name'] . '/drupal-vm-4.6.0', $projects_dir . '/' . $arguments['project_name'] . '/vm');
   chmod_r($projects_dir . '/' . $arguments['project_name']);
   // @TODO: Create config.yml for the project.
-  // @TODO: Add "echo-es" for the whole process.
+
+  // @TODO: Add "echo-es" and some bottlenecks
+  // with exceptions for the whole process.
 }
