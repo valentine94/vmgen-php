@@ -2,6 +2,9 @@
   "name": "drupalway/vmgen-php",
   "description": "PHP VM Generator tool",
   "license": "MIT",
+  "authors": [
+    { "name": "Valentine Matsveiko", "email": "mve@drupalway.net" }
+  ],
   "require": {
     "php": ">=5.6"
   }
