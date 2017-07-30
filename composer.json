@@ -1,0 +1,8 @@
+{
+  "name": "drupalway/vmgen-php",
+  "description": "PHP VM Generator tool",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.6"
+  }
+}
