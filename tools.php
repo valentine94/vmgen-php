@@ -214,6 +214,20 @@ function prepare_drupal_vm() {
   }
 }
 
+/**
+ * Progress bar.
+ *
+ * @param int $done
+ *   Done jobs.
+ * @param int $total
+ *   Total count of jobs.
+ */
+function progress_bar($done, $total) {
+  $perc = floor(($done / $total) * 100);
+  $left = 100 - $perc;
+  $write = sprintf("\033[0G\033[2K[%'={$perc}s>%-{$left}s] - $perc%%", "", "");
+  fwrite(STDOUT, $write);
+}
 
 /**
  * Parse the cli arguments into a correct array format.
@@ -234,6 +248,12 @@ function parse_arguments_into_assoc_array($argv) {
     // Check for a php version argument.
     if (stripos($argument, '--php') !== FALSE) {
       $arguments['php'] = str_replace('--php=', '', $argument);
+      if ($arguments['php'] == '5') {
+        $arguments['php'] = "'5.6'";
+      }
+      elseif ($arguments['php'] == '7') {
+        $arguments['php'] = "'7.0'";
+      }
       continue;
     }
     // Check for a project name argument.
