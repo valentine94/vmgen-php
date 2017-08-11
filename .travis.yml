@@ -16,7 +16,7 @@ install:
   - composer global require valentine94/vmgen-php
 script:
   # Run VM generator.
-  - /home/travis/.config/composer/vendor/valentine94/vmgen-php --php=7 --project-name=test
+  - /home/travis/.config/composer/vendor/valentine94/vmgen-php/vmgen-php --php=7 --project-name=test
   # Check if directory vm has been created.
   - ls -l ~/projects/test
   # Check if all files under vm directory exists.
