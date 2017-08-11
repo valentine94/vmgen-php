@@ -14,11 +14,9 @@ install:
   - composer global self-update
   # Install this package.
   - composer global require valentine94/vmgen-php
-  # Check availability of the 'vmgen-php' command.
-  - sudo which vmgen-php
 script:
   # Run VM generator.
-  - vmgen-php --php=7 --project-name=test
+  - /home/travis/.config/composer/vendor/valentine94/vmgen-php --php=7 --project-name=test
   # Check if directory vm has been created.
   - ls -l ~/projects/test
   # Check if all files under vm directory exists.
