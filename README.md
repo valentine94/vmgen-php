@@ -1,6 +1,8 @@
 PHP VM Generator tool
 =====================
 
+[![Build Status](https://travis-ci.org/valentine94/vmgen-php.svg?branch=master)](https://travis-ci.org/valentine94/vmgen-php)
+
 ## Description:
 A PHP tool that allows users to automatically prepare project 
 directories for using it with a [DrupalVM](https://github.com/geerlingguy/drupal-vm) .
