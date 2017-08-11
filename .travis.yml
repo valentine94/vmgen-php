@@ -10,6 +10,8 @@ dist: trusty
 install:
   # Clear composer caches.
   - composer global clearcache
+  # Update composer.
+  - composer global self-update
   # Install this package.
   - composer global require valentine94/vmgen-php
   # Check availability of the 'vmgen-php' command.
