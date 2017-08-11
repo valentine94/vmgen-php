@@ -4,6 +4,15 @@
  * Main vmgen executable file.
  */
 
+// Handle the help message.
+if ($argv[1] == '--help') {
+  echo "Usage: vmgen-php --php=PHP_VERSION --project-name=PROJECT_NAME\n\n";
+  echo "Arguments explanation:\n";
+  echo "--php \t\t PHP version\n";
+  echo "--project-name \t Project name version\n";
+  exit;
+}
+
 require __DIR__ . '/tools.php';
 if (!empty($argv)) {
   echo "Preparing DrupalVM for the project:\n";
