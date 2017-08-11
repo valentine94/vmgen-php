@@ -37,7 +37,6 @@ if (!empty($argv)) {
   chmod($projects_dir . '/' . $arguments['project_name'] . '/vm/config.yml', 0777);
   progress_bar(14, 15);
 
-  $cmd = "vagrant box list | grep 'geerlingguy/ubuntu1604'";
   if (shell_exec("vagrant box list | grep 'geerlingguy/ubuntu1604'") == '') {
     shell_exec("vagrant box add --name geerlingguy/ubuntu1604 https://app.vagrantup.com/geerlingguy/boxes/ubuntu1604");
   }
