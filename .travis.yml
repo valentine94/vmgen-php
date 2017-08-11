@@ -32,6 +32,8 @@ install:
   - composer global clearcache
   # Install this package.
   - composer global require valentine94/vmgen-php
+  # Check availability of the 'vmgen-php' command.
+  - which vmgen-php
 script:
   # Run VM generator.
   - vmgen-php --php=7 --project-name=test
