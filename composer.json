@@ -2,7 +2,7 @@
   "name": "valentine94/vmgen-php",
   "description": "PHP VM Generator tool",
   "license": "MIT",
-  "version": "1.0.0-alpha2",
+  "version": "1.0.0",
   "authors": [
     { "name": "Valentine Matsveiko", "email": "mve@drupalway.net" }
   ],
