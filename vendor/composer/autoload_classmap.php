@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Vmgen\\Vmgen' => $baseDir . '/src/Vmgen.php',
+    'Valentine94\\Vmgen\\Vmgen' => $baseDir . '/src/Vmgen.php',
 );

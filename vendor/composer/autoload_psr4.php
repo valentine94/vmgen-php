@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Vmgen\\' => array($baseDir . '/src'),
+    'Valentine94\\Vmgen\\' => array($baseDir . '/src'),
 );

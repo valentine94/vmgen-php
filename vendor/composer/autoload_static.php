@@ -9,19 +9,19 @@ class ComposerStaticInit6fa1b890fba4f581debff4b0549dce2e
     public static $prefixLengthsPsr4 = array (
         'V' => 
         array (
-            'Vmgen\\' => 6,
+            'Valentine94\\Vmgen\\' => 18,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Vmgen\\' => 
+        'Valentine94\\Vmgen\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
     public static $classMap = array (
-        'Vmgen\\Vmgen' => __DIR__ . '/../..' . '/src/Vmgen.php',
+        'Valentine94\\Vmgen\\Vmgen' => __DIR__ . '/../..' . '/src/Vmgen.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
