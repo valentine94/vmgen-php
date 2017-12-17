@@ -165,7 +165,7 @@ postgresql_users:
 installed_extras:
   - adminer
   # - blackfire
-  # - drupalconsole
+  - drupalconsole
   - drush
   # - elasticsearch
   # - java
@@ -173,7 +173,7 @@ installed_extras:
   # - memcached
   # - newrelic
   # - nodejs
-  # - pimpmylog
+  - pimpmylog
   # - redis
   # - ruby
   # - selenium
@@ -189,7 +189,7 @@ extra_packages: []
   # - sqlite
 
 # You can configure almost anything else on the server in the rest of this file.
-drush_version: "8.1.10"
+drush_version: "8.1.15"
 
 extra_security_enabled: false
 
