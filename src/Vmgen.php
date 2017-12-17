@@ -154,17 +154,20 @@ class Vmgen {
     if (!is_dir($this->projectsDirectory)) {
       mkdir($this->projectsDirectory);
     }
-    if (!is_dir($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name)) {
-      mkdir($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name);
-      chmod($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name, 0777);
+    $project_dir = $this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name;
+    if (!is_dir($project_dir)) {
+      mkdir($project_dir);
+      chmod($project_dir, 0777);
     }
-    if (!is_dir($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name . DIRECTORY_SEPARATOR . 'docroot')) {
-      mkdir($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name . DIRECTORY_SEPARATOR . 'docroot');
-      chmod($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name . DIRECTORY_SEPARATOR . 'docroot', 0777);
+    $docroot = $project_dir . DIRECTORY_SEPARATOR . 'docroot';
+    if (!is_dir($docroot)) {
+      mkdir($docroot);
+      chmod($docroot, 0777);
     }
-    if (!is_dir($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name . DIRECTORY_SEPARATOR . 'vm')) {
-      mkdir($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name . DIRECTORY_SEPARATOR . 'vm');
-      chmod($this->projectsDirectory . DIRECTORY_SEPARATOR . $project_name . DIRECTORY_SEPARATOR . 'vm', 0777);
+    $vm = $project_dir . DIRECTORY_SEPARATOR . 'vm';
+    if (!is_dir($vm)) {
+      mkdir($vm);
+      chmod($vm, 0777);
     }
     $this->progressBar(6);
     return $this;
