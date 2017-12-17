@@ -1,6 +1,6 @@
 <?php
 
-namespace Vmgen;
+namespace Valentine94\Vmgen;
 
 use DirectoryIterator;
 use ErrorException;

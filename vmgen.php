@@ -6,7 +6,7 @@
 // Include composer's auto-loader.
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Vmgen\Vmgen;
+use Valentine94\Vmgen\Vmgen;
 
 // Handle the help message.
 if ($argv[1] == '--help') {
