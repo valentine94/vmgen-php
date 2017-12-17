@@ -9,7 +9,7 @@ directories for using it with a [DrupalVM](https://github.com/geerlingguy/drupal
 
 ## Requirements:
 # Requirements:
-- Unix-based OS(tested on Ubuntu and macOS)
+- Linux-based OS(tested on Ubuntu and macOS)
 - Vagrant
 - VirtualBox
 - Ansible
