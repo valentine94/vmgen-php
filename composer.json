@@ -2,7 +2,7 @@
   "name": "valentine94/vmgen-php",
   "description": "PHP VM Generator tool",
   "license": "MIT",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "authors": [
     { "name": "Valentine Matsveiko", "email": "mve@drupalway.net" }
   ],
@@ -16,13 +16,5 @@
     "psr-4": {
       "Vmgen\\": "src/"
     }
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "composer dump-autoload -o"
-    ],
-    "post-update-cmd": [
-      "composer dump-autoload -o"
-    ]
   }
 }
