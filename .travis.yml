@@ -42,3 +42,5 @@ script:
   - ls -l ~/projects/test
   # Check if all files under vm directory exists.
   - ls -l ~/projects/test/vm
+  # Check if config.yml has been created and it's not empty.
+  - test -s ~/projects/test/vm/config.yml; echo $?
