@@ -34,7 +34,7 @@ install:
   # Update composer.
   - composer global self-update
   # Install this package.
-  - composer global require valentine94/vmgen-php
+  - composer global require valentine94/vmgen-php:dev-master
 script:
   # Run VM generator.
   - /home/travis/.config/composer/vendor/valentine94/vmgen-php/vmgen-php --php=7 --project-name=test
