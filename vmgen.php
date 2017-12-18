@@ -1,11 +1,11 @@
 <?php
+
 /**
  * @file
  * Main vmgen executable file.
  */
 
 // Set up auto-loader.
-$loader = false;
 if (file_exists($autoloadFile = __DIR__ . '/vendor/autoload.php')
   || file_exists($autoloadFile = __DIR__ . '/../autoload.php')
   || file_exists($autoloadFile = __DIR__ . '/../../autoload.php')
@@ -34,7 +34,7 @@ elseif (!empty($argv)) {
     ->processConfigTokens()
     ->fixConfigFilePermissions()
     ->importVagrantBox();
-  
+
   $vmgen->showCompleteMessage();
 }
 else {

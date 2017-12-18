@@ -178,7 +178,7 @@ class Vmgen {
    */
   public function unpackDrupalVm() {
     // Create object.
-    $zip = new ZipArchive;
+    $zip = new ZipArchive();
     // Open archive.
     if ($zip->open('/tmp/drupal_vm.zip') !== TRUE) {
       return FALSE;
@@ -201,20 +201,20 @@ class Vmgen {
     $dest = $this->projectsDirectory . '/' . $this->arguments['project_name'] . '/vm';
     // If source is not a directory stop processing.
     if (!is_dir($src)) {
-      throw new InvalidArgumentException('The source passed in does not appear to be a valid directory: ['.$src.']', 1);
+      throw new InvalidArgumentException('The source passed in does not appear to be a valid directory: [' . $src . ']', 1);
     }
 
     // If the destination directory does not exist create it.
     if (!is_dir($dest)) {
       if (!mkdir($dest, 0777, TRUE)) {
-        throw new InvalidArgumentException('The destination does not exist, and I can not create it: ['.$dest.']', 2);
+        throw new InvalidArgumentException('The destination does not exist, and I can not create it: [' . $dest . ']', 2);
       }
     }
 
     $emptied_dirs = array();
 
     // Open the source directory to read in files.
-    foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($src, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST) as $f) {
+    foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($src, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST) as $f) {
       // We need to get a path relative to where we are copying from.
       $relativePath = str_replace($src, '', $f->getRealPath());
 
@@ -222,7 +222,7 @@ class Vmgen {
       $destination = $dest . $relativePath;
 
       // If it is a file, lets just move that sucker over.
-      if($f->isFile()) {
+      if ($f->isFile()) {
         $path_parts = pathinfo($destination);
 
         // If we don't have a directory for this yet.
