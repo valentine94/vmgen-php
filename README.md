@@ -30,3 +30,4 @@ for example:
 `vmgen-php --php=7 --project-name=my_new_project`
 The tool will create your project directory at
  **$HOME/projects/PROJECT_NAME**
+ Use `vmgen-php --help` to see more info about params and usage.
