@@ -18,6 +18,7 @@ before_install:
   # Install Ansible.
   - pip install ansible
   - ansible --version
+  - pip install circlecli
   # Install Vagrant.
   - wget https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1_x86_64.deb
   - sudo dpkg -i vagrant_1.9.1_x86_64.deb
@@ -44,3 +45,5 @@ script:
   - ls -l ~/projects/test/vm
   # Check if config.yml has been created and it's not empty.
   - test -s ~/projects/test/vm/config.yml; echo $?
+  # Validate config.yml syntax.
+  - circlecli check ~/projects/test/vm/config.yml
