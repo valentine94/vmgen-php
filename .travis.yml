@@ -38,7 +38,7 @@ install:
   # Install Coder.
   - composer global require "drupal/coder:8.2.12"
   # Set up standards.
-  - /home/travis/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs --config-set installed_paths /home/travis/.composer/vendor/drupal/coder/coder_sniffer
+  - composer global require dealerdirect/phpcodesniffer-composer-installer
 script:
   - phpcs -i
   # Run VM generator.
