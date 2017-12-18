@@ -16,8 +16,5 @@
     "psr-4": {
       "Valentine94\\Vmgen\\": "src/"
     }
-  },
-  "config": {
-    "optimize-autoloader": true
   }
 }

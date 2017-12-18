@@ -3,8 +3,18 @@
  * @file
  * Main vmgen executable file.
  */
-// Include composer's auto-loader.
-require_once __DIR__ . '/vendor/autoload.php';
+
+// Set up auto-loader.
+$loader = false;
+if (file_exists($autoloadFile = __DIR__ . '/vendor/autoload.php')
+  || file_exists($autoloadFile = __DIR__ . '/../autoload.php')
+  || file_exists($autoloadFile = __DIR__ . '/../../autoload.php')
+) {
+  require_once $autoloadFile;
+}
+else {
+  throw new Exception('Autoloader not found!');
+}
 
 use Valentine94\Vmgen\Vmgen;
 
