@@ -2,7 +2,7 @@
 language: python
 python: "2.7"
 php:
-  - '7.0'
+  - '5.6'
 
 sudo: enabled
 dist: trusty
@@ -36,9 +36,7 @@ install:
   # Install this package.
   - composer global require valentine94/vmgen-php:dev-master
   # Install Coder.
-  - composer global require drupal/coder
-  # Install PHPCS.
-  - composer global require squizlabs/php_codesniffer
+  - composer global require "drupal/coder:8.2.12"
   # Set up standards.
   - /home/travis/.composer/vendor/squizlabs/php_codesniffer/scripts/phpcs --config-set installed_paths /home/travis/.composer/vendor/drupal/coder/coder_sniffer
 script:
