@@ -16,5 +16,13 @@
     "psr-4": {
       "Valentine94\\Vmgen\\": "src/"
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "composer dump-autoload --optimize"
+    ],
+    "post-update-cmd": [
+      "composer dump-autoload --optimize"
+    ]
   }
 }
