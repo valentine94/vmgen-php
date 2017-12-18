@@ -39,6 +39,8 @@ install:
   - composer global require "drupal/coder:8.2.12"
   # Set up standards.
   - composer global require dealerdirect/phpcodesniffer-composer-installer
+  - export PATH="$PATH:$HOME/.composer/vendor/bin"
+  - source ~/.bashrc
 script:
   - phpcs -i
   # Run VM generator.
