@@ -35,12 +35,19 @@ install:
   - composer global self-update
   # Install this package.
   - composer global require valentine94/vmgen-php:dev-master
+  # Install Coder.
+  - composer global require drupal/coder
+  # Install PHPCS.
+  - composer global require squizlabs/php_codesniffer
+  # Set up standards.
+  - /home/travis/.composer/vendor/squizlabs/php_codesniffer/scripts/phpcs --config-set installed_paths /home/travis/.composer/vendor/drupal/coder/coder_sniffer
 script:
+  - phpcs -i
   # Run VM generator.
   - /home/travis/.config/composer/vendor/valentine94/vmgen-php/vmgen-php --php=7 --project-name=test
   # Check if directory vm has been created.
-  - ls -l ~/projects/test
+  - ls -l /home/travis/projects/test
   # Check if all files under vm directory exists.
-  - ls -l ~/projects/test/vm
+  - ls -l /home/travis/projects/test/vm
   # Check if config.yml has been created and it's not empty.
-  - test -s ~/projects/test/vm/config.yml; echo $?
+  - test -s /home/travis/projects/test/vm/config.yml; echo $?
