@@ -41,6 +41,7 @@ install:
   - composer global require dealerdirect/phpcodesniffer-composer-installer
   - export PATH="$PATH:$HOME/.composer/vendor/bin"
   - pear install pear/PHP_CodeSniffer
+  - ln -s ~/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
   - phpenv rehash
 script:
   - phpcs -i
