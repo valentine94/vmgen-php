@@ -23,14 +23,15 @@ install:
   - composer global require valentine94/vmgen-php:dev-master
   # Install Coder.
   - composer global require "drupal/coder:8.2.12"
-  # Set up standards.
-  - composer global require dealerdirect/phpcodesniffer-composer-installer
+  # Install PHP_CodeSniffer.
   - pear channel-update pear.php.net
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
+  # Register Drupal coding standards.
   - phpcs --config-set installed_paths /home/travis/.config/composer/vendor/drupal/coder/coder_sniffer
-  - phpcs -i
 script:
+  # Check coding standards.
+  - phpcs --standard=Drupal --extensions=php,inc,md /home/travis/.config/composer/vendor/valentine94
   # Run VM generator.
   - /home/travis/.config/composer/vendor/valentine94/vmgen-php/vmgen-php --php=7 --project-name=test
   # Check if directory vm has been created.
