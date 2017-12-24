@@ -40,7 +40,6 @@ install:
   # Set up standards.
   - composer global require dealerdirect/phpcodesniffer-composer-installer
   - export PATH="$PATH:$HOME/.composer/vendor/bin"
-  - pyrus install http://phptal.org/latest.tar.gz
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
 script:
