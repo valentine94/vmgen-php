@@ -31,7 +31,7 @@ install:
   - phpcs --config-set installed_paths /home/travis/.config/composer/vendor/drupal/coder/coder_sniffer
 script:
   # Check coding standards.
-  - phpcs --standard=Drupal --extensions=php,inc /home/travis/.config/composer/vendor/valentine94
+  - phpcs --standard=Drupal --extensions=php,inc --ignore=*.md /home/travis/.config/composer/vendor/valentine94
   # Run VM generator.
   - /home/travis/.config/composer/vendor/valentine94/vmgen-php/vmgen-php --php=7 --project-name=test
   # Check if directory vm has been created.
