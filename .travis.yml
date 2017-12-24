@@ -2,22 +2,21 @@
 language: python
 python: "2.7"
 php:
+  - '5.5'
   - '5.6'
+  - '7.0'
+  - '7.1'
 
 sudo: enabled
 dist: trusty
 
 before_install:
-  # Update APT caches.
-  - sudo apt-get update
-  # Install some system dependencies.
-  - sudo apt-get install build-essential dkms unzip linux-headers-4.4.0-51-generic
-
-install:
   # Clear composer caches.
   - composer global clearcache
   # Update composer.
   - composer global self-update
+
+install:
   # Install this package.
   - composer global require valentine94/vmgen-php:dev-master
   # Install Coder.
