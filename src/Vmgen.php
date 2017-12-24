@@ -98,7 +98,7 @@ class Vmgen {
    *
    * @return $this
    */
-  public function prepareArguments($args) {
+  public function prepareArguments(array $args) {
     // Ignore the first arg as it is a command name.
     unset($args[0]);
 
