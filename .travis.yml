@@ -25,7 +25,7 @@ install:
   - composer global require "drupal/coder:8.2.12"
   # Install PHP_CodeSniffer.
   - pear channel-update pear.php.net
-  - pear install pear/PHP_CodeSniffer
+  - pear install pear/PHP_CodeSniffer-2.9.1
   - phpenv rehash
   # Register Drupal coding standards.
   - phpcs --config-set installed_paths /home/travis/.config/composer/vendor/drupal/coder/coder_sniffer
