@@ -11,6 +11,7 @@ sudo: enabled
 dist: trusty
 
 before_install:
+  - if [[ ${TRAVIS_PHP_VERSION:0:1} == "5" || ${TRAVIS_PHP_VERSION:0:1} == "7" ]]; then echo "include_path='.:/home/travis/.phpenv/versions/$(phpenv version-name)/lib/php/pear'" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi
   # Clear composer caches.
   - composer global clearcache
   # Update composer.
