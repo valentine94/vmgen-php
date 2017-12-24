@@ -28,6 +28,7 @@ install:
   - pear channel-update pear.php.net
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
+  - phpcs --config-set installed_paths /home/travis/.config/composer/vendor/drupal/coder/coder_sniffer
   - phpcs -i
 script:
   # Run VM generator.
