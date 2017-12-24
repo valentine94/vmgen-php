@@ -11,6 +11,7 @@ sudo: enabled
 dist: trusty
 
 before_install:
+  - pear config-set php_dir $(php -r 'echo substr(get_include_path(),2);')
   - if [[ ${TRAVIS_PHP_VERSION:0:1} == "5" || ${TRAVIS_PHP_VERSION:0:1} == "7" ]]; then echo "include_path='.:/home/travis/.phpenv/versions/$(phpenv version-name)/lib/php/pear'" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi
   # Clear composer caches.
   - composer global clearcache
@@ -24,7 +25,6 @@ install:
   - composer global require "drupal/coder:8.2.12"
   # Set up standards.
   - composer global require dealerdirect/phpcodesniffer-composer-installer
-  - export PATH="$PATH:$HOME/.composer/vendor/bin"
   - pear channel-update pear.php.net
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
