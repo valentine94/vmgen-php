@@ -92,7 +92,7 @@ drupal_major_version: 8
 drupal_domain: "{{ vagrant_hostname }}"
 drupal_site_name: "Drupal"
 drupal_install_profile: standard
-drupal_enable_modules: [ 'devel' ]
+drupal_enable_modules: ['devel']
 drupal_account_name: admin
 drupal_account_pass: admin
 
@@ -186,7 +186,6 @@ installed_extras:
 
 # Add any extra apt or yum packages you would like installed.
 extra_packages: []
-  # - sqlite
 
 # You can configure almost anything else
 # on the server in the rest of this file.
@@ -237,13 +236,12 @@ composer_home_path: "/home/{{ drupalvm_user }}/.composer"
 composer_home_owner: "{{ drupalvm_user }}"
 composer_home_group: "{{ drupalvm_user }}"
 composer_global_packages:
-  - { name: hirak/prestissimo, release: '^0.3' }
+  - {name: hirak/prestissimo, release: '^0.3'}
 
 # Run specified scripts before or after VM is provisioned. Path is relative to
 # the `provisioning/playbook.yml` file.
 pre_provision_scripts: []
 post_provision_scripts: []
-  # - "../examples/scripts/configure-solr.sh"
 
 # MySQL Configuration.
 mysql_root_password: root
