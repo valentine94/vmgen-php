@@ -206,7 +206,7 @@ firewall_disable_ufw: true
 # See version-specific notes:
 # http://docs.drupalvm.com/en/latest/configurations/php/
 php_version: {!php_version!}
-php_install_recommends: no
+php_install_recommends: "no"
 php_memory_limit: "512M"
 php_display_errors: "On"
 php_display_startup_errors: "On"
