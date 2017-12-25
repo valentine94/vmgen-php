@@ -11,6 +11,7 @@ sudo: enabled
 dist: trusty
 
 before_install:
+  # Workaround for correctly working PHPCS.
   - pear config-set php_dir $(php -r 'echo substr(get_include_path(),2);')
   - if [[ ${TRAVIS_PHP_VERSION:0:1} == "5" || ${TRAVIS_PHP_VERSION:0:1} == "7" ]]; then echo "include_path='.:/home/travis/.phpenv/versions/$(phpenv version-name)/lib/php/pear'" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi
   # Clear composer caches.
@@ -32,6 +33,7 @@ install:
 script:
   # Check coding standards.
   - phpcs --standard=Drupal --extensions=php,inc --ignore=*.md /home/travis/.config/composer/vendor/valentine94
+  - phpcs --standard=DrupalPractice --extensions=php,inc --ignore=*.md /home/travis/.config/composer/vendor/valentine94
   # Run VM generator.
   - /home/travis/.config/composer/vendor/valentine94/vmgen-php/vmgen-php --php=7 --project-name=test
   # Check if directory vm has been created.
