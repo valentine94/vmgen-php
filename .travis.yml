@@ -18,6 +18,8 @@ before_install:
   - composer global clearcache
   # Update composer.
   - composer global self-update
+  # Install yamllint.
+  - pip install yamllint
 
 install:
   # Install this package.
@@ -42,3 +44,5 @@ script:
   - ls -l /home/travis/projects/test/vm
   # Check if config.yml has been created and it's not empty.
   - test -s /home/travis/projects/test/vm/config.yml; echo $?
+  # Validate result config.yml using yamllint.
+  - yamllint /home/travis/projects/test/vm/config.yml
