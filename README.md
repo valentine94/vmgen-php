@@ -1,14 +1,13 @@
 PHP VM Generator tool
 =====================
 
-[![Build Status](https://travis-ci.org/valentine94/vmgen-php.svg?branch=master)](https://travis-ci.org/valentine94/vmgen-php)
+[![Build Status](https://travis-ci.org/valentine94/vmgen-php.svg?branch=master)](https://travis-ci.org/valentine94/vmgen-php)[![Packagist](https://img.shields.io/packagist/v/valentine94/vmgen-php.svg)](https://packagist.org/packages/valentine94/vmgen-php)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description:
 A PHP tool that allows users to automatically prepare project 
 directories for using it with a [DrupalVM](https://github.com/geerlingguy/drupal-vm) .
 
 ## Requirements:
-# Requirements:
 - Linux-based OS(tested on Ubuntu and macOS)
 - Vagrant
 - VirtualBox
@@ -20,7 +19,6 @@ directories for using it with a [DrupalVM](https://github.com/geerlingguy/drupal
 - Composer
 
 ## Installation:
-### Install via Composer
 `composer global require valentine94/vmgen-php`
 
 ## Usage:
