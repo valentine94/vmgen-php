@@ -74,11 +74,10 @@ drupal_composer_install_dir: "/var/www/drupalvm/drupal"
 # Set this to 'true' and 'build_makefile', 'build_composer' to 'false' if you
 # are using Composer's create-project as a site deployment strategy.
 drupal_build_composer_project: false
-drupal_composer_project_package: "drupal-composer/drupal-project:8.x-dev"
-drupal_composer_project_options: "--prefer-dist --stability dev --no-interaction"
 
 # Set this to 'false' if you don't need to install drupal (using the drupal_*
-# settings below), but instead copy down a database (e.g. using drush sql-sync).
+# settings below), but instead copy down a database
+# (e.g. using drush sql-sync).
 drupal_install_site: false
 
 # Required Drupal settings.
@@ -110,7 +109,8 @@ configure_drush_aliases: true
 drush_aliases_host_template: "templates/drupalvm.aliases.drushrc.php.j2"
 drush_aliases_guest_template: "templates/drupalvm-local.aliases.drushrc.php.j2"
 
-# Nginx hosts. Each site will get a server entry using the configuration defined
+# Nginx hosts.
+# Each site will get a server entry using the configuration defined
 # here. Set the 'is_php' property for document roots that contain PHP apps like
 # Drupal.
 nginx_hosts:
@@ -188,7 +188,8 @@ installed_extras:
 extra_packages: []
   # - sqlite
 
-# You can configure almost anything else on the server in the rest of this file.
+# You can configure almost anything else
+# on the server in the rest of this file.
 drush_version: "8.1.15"
 
 extra_security_enabled: false
@@ -211,7 +212,8 @@ firewall_disable_firewalld: true
 firewall_disable_ufw: true
 
 # PHP Configuration. Currently-supported versions: 5.6, 7.0, 7.1.
-# See version-specific notes: http://docs.drupalvm.com/en/latest/configurations/php/
+# See version-specific notes:
+# http://docs.drupalvm.com/en/latest/configurations/php/
 php_version: {!php_version!}
 php_install_recommends: no
 php_memory_limit: "512M"
