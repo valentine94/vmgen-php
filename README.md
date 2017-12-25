@@ -1,11 +1,11 @@
 PHP VM Generator tool
 =====================
 
-[![Build Status](https://travis-ci.org/valentine94/vmgen-php.svg?branch=master)](https://travis-ci.org/valentine94/vmgen-php)[![Packagist](https://img.shields.io/packagist/v/valentine94/vmgen-php.svg)](https://packagist.org/packages/valentine94/vmgen-php)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/valentine94/vmgen-php.svg?branch=master)](https://travis-ci.org/valentine94/vmgen-php)[![Packagist](https://img.shields.io/packagist/v/valentine94/vmgen-php.svg)](https://packagist.org/packages/valentine94/vmgen-php)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![GitHub forks](https://img.shields.io/github/forks/valentine94/vmgen-php.svg)](https://github.com/valentine94/vmgen-php/network)[![GitHub issues](https://img.shields.io/github/issues/valentine94/vmgen-php.svg)](https://github.com/valentine94/vmgen-php/issues)
 
 ## Description:
 A PHP tool that allows users to automatically prepare project 
-directories for using it with a [DrupalVM](https://github.com/geerlingguy/drupal-vm) .
+directories for using it with a [DrupalVM](https://github.com/geerlingguy/drupal-vm).
 
 ## Requirements:
 - Linux-based OS(tested on Ubuntu and macOS)
