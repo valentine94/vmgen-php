@@ -86,7 +86,7 @@ class Vmgen {
     echo "Usage: vmgen-php --php=PHP_VERSION --project-name=PROJECT_NAME\n\n";
     echo "Arguments explanation:\n";
     echo "--php \t\t PHP version\n";
-    echo "--project-name \t Project name version\n";
+    echo "--project-name \t Project name\n";
     exit;
   }
 
